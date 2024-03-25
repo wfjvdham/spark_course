@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "spark-course"
+version = "0.1.0"
+description = ""
+authors = ["Wim van der Ham <wfjvdham@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.1"
+tqdm = "^4.66.2"
+pyspark = "^3.0"
+pyspark-stubs = "^3.0.0.post3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
