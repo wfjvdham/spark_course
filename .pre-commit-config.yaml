@@ -1,0 +1,52 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: name-tests-test
+    -   id: requirements-txt-fixer
+    -   id: check-added-large-files
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.12.0
+    hooks:
+    -   id: reorder-python-imports
+        args: [--py38-plus, --add-import, 'from __future__ import annotations']
+    -   id: reorder-python-imports
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.1
+    hooks:
+    -   id: pyupgrade
+        args: [--py38-plus]
+-   repo: https://github.com/hhatto/autopep8
+    rev: v2.1.0
+    hooks:
+    -   id: autopep8
+-   repo: https://github.com/biomejs/pre-commit
+    rev: v0.1.0
+    hooks:
+    -   id: biome-check
+        additional_dependencies: ["@biomejs/biome@1.4.1"]
+-   repo: local
+    hooks:
+    -   id: no-github-dot-git
+        name: No need for .git for github/gitlab urls
+        entry: '(github|gitlab).*\.git'
+        files: all-repos.yaml
+        language: pygrep
+    -   id: no-github-trailing-slash
+        name: No need for trailing / for urls
+        entry: '.*/$'
+        files: all-repos.yaml
+        language: pygrep
+-   repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 24.3.0
+    hooks:
+    -   id: black
+        # It is recommended to specify the latest version of Python
+        # supported by your project here, or alternatively use
+        # pre-commit's default_language_version, see
+        # https://pre-commit.com/#top_level-default_language_version
+        language_version: python3.10
