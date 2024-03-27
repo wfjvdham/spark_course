@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from pyspark.sql import SparkSession
 from pyspark.sql import Window
 from pyspark.sql.functions import *
