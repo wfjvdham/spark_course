@@ -11,13 +11,13 @@ spark = (
     .getOrCreate()
 )
 
-products_table = spark.read.parquet("6_exercises/data/products_parquet/")
+products_table = spark.read.parquet("exercises/data/products_parquet/")
 products_table.createOrReplaceTempView("products")
 
-sellers_table = spark.read.parquet("6_exercises/data/sellers_parquet/")
+sellers_table = spark.read.parquet("exercises/data/sellers_parquet/")
 sellers_table.createOrReplaceTempView("sellers")
 
-sales_table = spark.read.parquet("6_exercises/data/sales_parquet/")
+sales_table = spark.read.parquet("exercises/data/sales_parquet/")
 sales_table.createOrReplaceTempView("sales")
 
 n_products = spark.sql("SELECT COUNT(*) FROM products")

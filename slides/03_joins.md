@@ -38,5 +38,10 @@ big_table.join(broadcast(small_table), ...)
 df = df.withColumn("is_adult", when(df["age"] >= 18, "Yes").otherwise("No"))
 ```
 
-# Exersice 2
--
+# Exercise 2 Extra
+
+- In the sales table keep the 2 most occurring dates, replace the other dates with `Other`
+
+You can use `flatMap()` [Explained](https://stackoverflow.com/a/22510434)
+
+- Try the

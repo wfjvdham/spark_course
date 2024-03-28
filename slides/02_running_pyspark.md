@@ -43,4 +43,15 @@ spark.sql("SELECT COUNT(*) FROM users")
 spark.read.parquet("<location of file or folder>")
 ```
 
-# Warmup 1 & 2
+# Warmup 1 & 2 Extra
+
+- create a df like this:
+
+```
+data = [("A", "X"), ("A", "Y"), ("A", "X"), ("B", "Y"), ("B", "X"), ("C", "X"), ("C", "X"), ("C", "Y")]
+df = spark.createDataFrame(data, ["category1", "category2"])
+```
+
+use the `cube()` and `crosstab()` function on the df
+
+- Use the `summary()` function on one of the tables

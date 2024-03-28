@@ -25,3 +25,13 @@ table.withColumn("new_var_id", udf(col("var_id")))
 
 - hashlib.md5(ret).hexdigest()
 - hashlib.sha256(ret).hexdigest()
+
+# Exercise 5 Extra
+
+- create a df like this:
+
+```
+data = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)]
+df = spark.createDataFrame(data, ["col1", "col2", "col3"])
+df.show()
+```

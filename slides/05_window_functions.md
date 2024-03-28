@@ -52,3 +52,32 @@ df3.show()
 - Create two tables for the objectives
 - Combine all those tables to get the answer
 - Show the answer for product 0
+
+# Exercise 3 Extra
+
+- create a df like this:
+
+```
+data = [('James', 34, 55000), ('Michael', 30, 70000), ('Robert', 37, 60000), ('Maria', 29, 80000), ('Jen', 32, 65000)]
+df = spark.createDataFrame(data, ["name", "age" , "salary"])
+df.show()
+```
+
+- Calculate the difference between the salary between two consecutive columns. You can use `monotonically_increasing_id()` and `lag()`
+
+- create a df like this:
+
+```
+data = [
+    Row(id=1, column1=5),
+    Row(id=2, column1=8),
+    Row(id=3, column1=12),
+    Row(id=4, column1=1),
+    Row(id=5, column1=15),
+    Row(id=6, column1=7),
+]
+df = spark.createDataFrame(data)
+df.show()
+```
+
+- Get the row number of the 3rd largest value

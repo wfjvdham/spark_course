@@ -13,8 +13,8 @@ spark = (
     .getOrCreate()
 )
 
-products_table = spark.read.parquet("6_exercises/data/products_parquet/")
-sales_table = spark.read.parquet("6_exercises/data/sales_parquet/")
+products_table = spark.read.parquet("exercises/data/products_parquet/")
+sales_table = spark.read.parquet("exercises/data/sales_parquet/")
 
 start_time = time.monotonic()
 

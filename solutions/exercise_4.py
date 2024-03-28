@@ -1,7 +1,9 @@
 import hashlib
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import *
+from pyspark.sql.functions import array
+from pyspark.sql.functions import col
+from pyspark.sql.functions import count
 
 spark = (
     SparkSession.builder.master("local")
@@ -11,7 +13,7 @@ spark = (
     .getOrCreate()
 )
 
-sales_table = spark.read.parquet("6_exercises/data/sales_parquet/")
+sales_table = spark.read.parquet("exercises/data/sales_parquet/")
 
 
 def algo(order_id, bill_text):
@@ -33,3 +35,19 @@ sales_table.withColumn(
     "hashed_bill",
     algo_udf(col("order_id"), col("bill_raw_text")),
 ).groupBy(col("hashed_bill")).agg(count("*").alias("cnt")).where(col("cnt") > 1).show()
+
+# Extra
+
+data = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)]
+df = spark.createDataFrame(data, ["col1", "col2", "col3"])
+df.show()
+
+
+def min_max_ratio(row):
+    return float(min(row) / max(row))
+
+
+min_max_ratio_udf = spark.udf.register("min_max_ratio", min_max_ratio)
+
+df = df.withColumn("min_max_ratio", min_max_ratio_udf(array(df.columns)))
+df.show()
