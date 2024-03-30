@@ -9,9 +9,8 @@ readme = "README.md"
 python = "^3.10"
 pandas = "^2.2.1"
 tqdm = "^4.66.2"
-pyspark = "^3.0"
-pyspark-stubs = "^3.0.0.post3"
 pre-commit = "^3.7.0"
+pyspark = "^3.5.1"
 
 
 [build-system]

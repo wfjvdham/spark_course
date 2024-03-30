@@ -230,46 +230,34 @@ virtualenv = ">=20.10.0"
 
 [[package]]
 name = "py4j"
-version = "0.10.9"
+version = "0.10.9.7"
 description = "Enables Python programs to dynamically access arbitrary Java objects"
 optional = false
 python-versions = "*"
 files = [
-    {file = "py4j-0.10.9-py2.py3-none-any.whl", hash = "sha256:859ba728a7bb43e9c2bf058832759fb97a598bb28cc12f34f5fc4abdec08ede6"},
-    {file = "py4j-0.10.9.tar.gz", hash = "sha256:36ec57f43ff8ced260a18aa9a4e46c3500a730cac8860e259cbaa546c2b9db2f"},
+    {file = "py4j-0.10.9.7-py2.py3-none-any.whl", hash = "sha256:85defdfd2b2376eb3abf5ca6474b51ab7e0de341c75a02f46dc9b5976f5a5c1b"},
+    {file = "py4j-0.10.9.7.tar.gz", hash = "sha256:0b6e5315bb3ada5cf62ac651d107bb2ebc02def3dee9d9548e3baac644ea8dbb"},
 ]
 
 [[package]]
 name = "pyspark"
-version = "3.0.3"
+version = "3.5.1"
 description = "Apache Spark Python API"
 optional = false
-python-versions = "*"
+python-versions = ">=3.8"
 files = [
-    {file = "pyspark-3.0.3.tar.gz", hash = "sha256:c4499903e3d7289cf2b4bf7755fb32cf17922598f3b85a1c230860dec020eec4"},
+    {file = "pyspark-3.5.1.tar.gz", hash = "sha256:dd6569e547365eadc4f887bf57f153e4d582a68c4b490de475d55b9981664910"},
 ]
 
 [package.dependencies]
-py4j = "0.10.9"
+py4j = "0.10.9.7"
 
 [package.extras]
-ml = ["numpy (>=1.7)"]
-mllib = ["numpy (>=1.7)"]
-sql = ["pandas (>=0.23.2)", "pyarrow (>=0.15.1)"]
-
-[[package]]
-name = "pyspark-stubs"
-version = "3.0.0.post3"
-description = "A collection of the Apache Spark stub files"
-optional = false
-python-versions = "*"
-files = [
-    {file = "pyspark-stubs-3.0.0.post3.tar.gz", hash = "sha256:bea8b6ed8a77fac06d8df99d80b9d017bf4de632583d7eef829b4e65653f9d03"},
-    {file = "pyspark_stubs-3.0.0.post3-py3-none-any.whl", hash = "sha256:687b0c1cc4b3b3cbe9cf002b4d1b44bfacb3487921ec8c76aecf71b59c5fe4ad"},
-]
-
-[package.dependencies]
-pyspark = "==3.0.*"
+connect = ["googleapis-common-protos (>=1.56.4)", "grpcio (>=1.56.0)", "grpcio-status (>=1.56.0)", "numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=4.0.0)"]
+ml = ["numpy (>=1.15)"]
+mllib = ["numpy (>=1.15)"]
+pandas-on-spark = ["numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=4.0.0)"]
+sql = ["numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=4.0.0)"]
 
 [[package]]
 name = "python-dateutil"
@@ -437,4 +425,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "8006f59efef230f9264e36f0be5c974efa300a76d160430177b3ee746a7fa826"
+content-hash = "bb1f8a46dab7dd0629c3eef0881ee48c553237482cf9e28f1cae1ceb461bbdd0"
