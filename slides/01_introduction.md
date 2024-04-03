@@ -42,4 +42,34 @@ python package that allows you to interact with Spark
 
 # Installation
 
-[instructions](https://spark.apache.org/docs/latest/api/python/getting_started/install.html)
+1. Install wsl if on windows:
+
+`wsl --install`
+
+2. install java if it is not installed already:
+
+```
+java -version
+sudo apt update
+sudo apt install default-jre
+java -version
+```
+
+3. Install `pipx` required for installing `poetry`
+
+```
+sudo apt install pipx
+pipx ensurepath
+```
+
+4. Install `poetry`
+
+```
+pipx install poetry
+```
+
+5. Install python dependencies and `pyspark`:
+
+```
+poetry install
+```
