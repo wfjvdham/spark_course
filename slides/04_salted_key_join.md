@@ -28,6 +28,7 @@ Apache Spark provides a suite of web user interfaces (UIs) that you can use to m
 
 - **Jobs** are run every time after a `show()`, `count()` or `collect()` is called
 - **Stages** a set of tasks that can be executed in parallel. Divided by when data needs to be exchanged.
+- **Task** smallest unit of work that runs a computation on a partition of the data
 
 You can use the history server or sleep
 

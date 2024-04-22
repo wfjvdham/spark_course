@@ -16,8 +16,6 @@ spark = (
 products_table = spark.read.parquet("exercises/data/products_parquet/")
 sales_table = spark.read.parquet("exercises/data/sales_parquet/")
 
-start_time = time.monotonic()
-
 # works but slow
 
 # joined_table = sales_table.join(products_table, sales_table.product_id == products_table.product_id)
@@ -42,11 +40,14 @@ for _r in results:
     replicated_products.append(_r["product_id"])
     for _rep in range(0, REPLICATION_FACTOR):
         l.append((_r["product_id"], _rep))
+
 rdd = spark.sparkContext.parallelize(l)
 replicated_df = rdd.map(
     lambda x: Row(product_id=x[0], replication=int(x[1])),
 )
 replicated_df = spark.createDataFrame(replicated_df)
+
+# replicated_df.show()
 
 products_table = products_table.join(
     broadcast(replicated_df),
@@ -99,7 +100,5 @@ joined_table.agg(
 ).show()
 
 # joined_table.withColumn("revenue", col("num_pieces_sold") * col("price")).agg({"revenue": "avg"}).show()
-
-print(time.monotonic() - start_time)
 
 time.sleep(6000)
