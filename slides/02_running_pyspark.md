@@ -33,6 +33,8 @@ users_table.groupBy(col("user_id")).agg(
 spark.sql("SELECT COUNT(*) FROM users")
 ```
 
+In this course I will show the SQL API but will focus on the DataFrameAPI
+
 # parquet files
 
 - Columnar Storage, mostly faster

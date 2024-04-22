@@ -8,7 +8,7 @@
 
 # Sort Merge Joins
 
-- Sorting
+- Sorting on every partition in parallel
 - Merging
 - All-to-all communication
 - Minimize data movement

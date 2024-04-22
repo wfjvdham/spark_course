@@ -11,18 +11,18 @@ spark = (
     .getOrCreate()
 )
 
-# sellers_table = spark.read.parquet("exercises/data/sellers_parquet/")
+sellers_table = spark.read.parquet("exercises/data/sellers_parquet/")
 sales_table = spark.read.parquet("exercises/data/sales_parquet/")
 
-# joined_table = sales_table.join(
-#     broadcast(sellers_table),
-#     sales_table.seller_id == sellers_table.seller_id,
-# )
+joined_table = sales_table.join(
+    broadcast(sellers_table),
+    sales_table.seller_id == sellers_table.seller_id,
+)
 
-# joined_table.withColumn(
-#     "contribution",
-#     col("num_pieces_sold") / col("daily_target"),
-# ).groupBy(sellers_table["seller_id"]).agg({"contribution": "avg"}).show()
+joined_table.withColumn(
+    "contribution",
+    col("num_pieces_sold") / col("daily_target"),
+).groupBy(sellers_table["seller_id"]).agg({"contribution": "avg"}).show()
 
 # Extra
 

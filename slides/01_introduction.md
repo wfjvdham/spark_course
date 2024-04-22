@@ -4,9 +4,9 @@ Wim van der Ham
 
 mono@fastmail.nl
 
-Master Human Media Interaction (AI)
+Data Engineer Alliander
 
-# Experience:
+# Experience with PySpark:
 
 - Quby
 - LeasePlan
@@ -28,6 +28,8 @@ Master Human Media Interaction (AI)
 # About Spark
 
 [Spark](https://spark.apache.org/)
+
+Distributed computing Framework
 
 - **Scalability** Spark scales horizontally, allowing users to easily scale their applications from a single machine to thousands of nodes. It achieves scalability by distributing data across the cluster and parallelizing computation.
 - **Lazy Evaluation** Spark adopts a lazy evaluation strategy, meaning it delays executing transformations until an action is triggered. This optimization technique improves performance by allowing Spark to optimize the execution.
