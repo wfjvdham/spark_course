@@ -4,6 +4,10 @@ A function to calculate something
 
 WARNING: in general it is not recommended to use them because Spark cannot optimize them. Always first try to express it in SQL
 
+Because: 
+- data moves between JVM and python
+- 1 row at the time
+
 But if you cannot do it you have to use UDF
 
 ```
