@@ -23,4 +23,16 @@ SQL / DataFrame
 Shuffle Read Total bytes read during shuffle
 Shuffle Write Bytes writen to disk in order to be read by a future shuffle
 
+# Etc
+
+https://sparkbyexamples.com/spark/spark-web-ui-understanding/
+
 https://sparkbyexamples.com/pyspark/pyspark-repartition-vs-coalesce/
+
+https://github.com/spark-examples/pyspark-examples/blob/master/pyspark-types.py
+
+https://sparkbyexamples.com/pyspark/pyspark-broadcast-variables/
+
+https://sparkbyexamples.com/pyspark/pyspark-structtype-and-structfield/
+
+https://sparkbyexamples.com/pyspark/pyspark-window-functions/

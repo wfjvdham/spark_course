@@ -23,7 +23,7 @@ employees_table.select(
 )
 ```
 
-other examples of build in functions: [link](https://spark.apache.org/docs/latest/sql-ref-functions-builtin.html#aggregate-functions)
+other examples of build in functions: [link](https://sparkbyexamples.com/pyspark/pyspark-window-functions/)
 
 
 # Anti Join
