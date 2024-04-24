@@ -10,5 +10,17 @@ So if you use hadoop you can better combine it with Spark
 
 Spark does not have a distributed data storage. If you need that you can use hadoop.
 
+# locally run with multiple node
+
+```master("local[3]")```
+
 # Spark Web UI
 
+DAG
+Event Timeline
+SQL / DataFrame
+
+Shuffle Read Total bytes read during shuffle
+Shuffle Write Bytes writen to disk in order to be read by a future shuffle
+
+https://sparkbyexamples.com/pyspark/pyspark-repartition-vs-coalesce/
